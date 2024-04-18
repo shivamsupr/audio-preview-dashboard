@@ -10,6 +10,7 @@ const Index = () => {
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         {americanVoiceLibrary.map((voice, index) => (
           <VStack key={index} p={5} boxShadow="md" borderRadius="lg">
+            <Text>{voice.voice_id}</Text>
             <Text fontWeight="bold">{voice.name || "Unnamed Voice"}</Text>
             <Text>{voice.accent}</Text>
             <Text>{`${voice.gender}, ${voice.age}`}</Text>
